@@ -68,17 +68,8 @@
 <div class="flex-center position-ref full-height">
     <div class="content">
         <div class="title m-b-md">
-            Trivia Game
+            Points: {{$points}}
         </div>
-        <form action="{{url('result')}}" method="POST">
-            @foreach($questions as $question)
-                <div>
-                    {!! $question->print() !!}
-                </div>
-            @endforeach
-            {!! csrf_field() !!}
-            <input type="submit" value="Submit">
-        </form>
     </div>
 </div>
 </body>

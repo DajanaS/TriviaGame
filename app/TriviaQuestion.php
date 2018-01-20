@@ -5,21 +5,33 @@ namespace App;
 
 abstract class TriviaQuestion
 {
+    private $id;
     private $question;
     private $answer;
     private $value;
 
     /**
      * TriviaQuestion constructor.
+     * @param $id integer
      * @param $question string
      * @param $answer string
      * @param $value integer
      */
-    public function __construct($question, $answer, $value)
+    public function __construct($id, $question, $answer, $value)
     {
+        $this->id = $id;
         $this->question = $question;
         $this->answer = $answer;
         $this->value = $value;
+    }
+
+    /**
+     * Get the ID of the question.
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     /**
